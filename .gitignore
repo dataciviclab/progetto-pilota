@@ -1,0 +1,73 @@
+# =========================
+# 🔒 DATI (NON VERSIONARE)
+# =========================
+data/raw/**
+data/clean/**
+data/mart/**
+!data/**/README.md
+
+# eventuali export temporanei
+*.csv
+*.tsv
+*.xlsx
+*.xls
+*.parquet
+*.json
+
+# =========================
+# 🧠 NOTEBOOK / PYTHON
+# =========================
+__pycache__/
+*.py[cod]
+*.ipynb_checkpoints/
+.env
+.venv/
+venv/
+.envrc
+
+# =========================
+# 🧪 TOOL / TEMP
+# =========================
+.tmp/
+.tmp/**
+.cache/
+.cache/**
+logs/
+*.log
+
+# =========================
+# 💻 IDE / EDITOR
+# =========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+.idea/
+*.code-workspace
+
+# =========================
+# 🖥️ OS
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# 🔑 CREDENTIALS (MAI!)
+# =========================
+credentials.json
+service_account.json
+*.key
+*.pem
+
+# =========================
+# 📦 ARCHIVI
+# =========================
+*.zip
+*.tar
+*.gz
+
+# =========================
+# 🔍 ALTRO
+# =========================
+nohup.out
