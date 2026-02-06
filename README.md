@@ -8,7 +8,7 @@ Negli ultimi anni molti Comuni dichiarano miglioramenti nella percentuale di rac
 Questo progetto serve a verificare se esistono Comuni che “migliorano sulla carta” mentre, in realtà, producono più rifiuti totali, aprendo un tema cruciale di qualità degli indicatori ambientali e delle politiche locali.
 
 ## Ruoli - TBD
-- Project Lead: Gabry
+- Project Lead: @Gabrymi93
 - Data: Alessio
 - Metodo:
 - Viz: Matteo
@@ -20,7 +20,7 @@ Questo progetto serve a verificare se esistono Comuni che “migliorano sulla ca
 - Periodo: Ultimi 5 anni
 - Livello: Comunale
 
-## Output pubblico - TBD
+## Output pubblico
 - Tipo: (dashboard / report / pagina)
 - Link: (quando disponibile)
 
@@ -37,5 +37,5 @@ Questo progetto serve a verificare se esistono Comuni che “migliorano sulla ca
 Dettagli in `WORKFLOW.md`.
 
 ## Link utili
-- Spreadsheet progetto ([Template](https://docs.google.com/spreadsheets/d/17EmTUVLzimppd70kckX2r2UxPQIwGDMU_Fzsqec4idg/edit?gid=1775469119#gid=1775469119))
+- [Spreadsheet progetto](https://docs.google.com/spreadsheets/d/1RzWUPYnZgcM235-XMWeD5rjNDNhqwkMWBvqDDLBvAMs/edit?usp=sharing)
 - [Metodo DataCivicLab](https://github.com/dataciviclab/dataciviclab/blob/main/METHOD.md)
