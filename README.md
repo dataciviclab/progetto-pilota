@@ -1,29 +1,31 @@
-# 📊 Titolo del progetto
+# #1 Progetto Pilota del Lab
 
 ## Domanda civica
-(Una sola frase, chiara, misurabile)
+Ci sono comuni che migliorano la raccolta differenziata (%) ma aumentano i rifiuti totali?
 
 ## Perché questo progetto
-(2–3 righe: perché questa domanda è rilevante ora)
+Negli ultimi anni molti Comuni dichiarano miglioramenti nella percentuale di raccolta differenziata, spesso usata come indicatore chiave di sostenibilità. Ma questo dato, da solo, può essere fuorviante: un aumento della percentuale non garantisce una riduzione reale dei rifiuti prodotti.
+Questo progetto serve a verificare se esistono Comuni che “migliorano sulla carta” mentre, in realtà, producono più rifiuti totali, aprendo un tema cruciale di qualità degli indicatori ambientali e delle politiche locali.
 
-## Ruoli
-- Project Lead:
-- Data:
-- Metodo:
-- Viz:
-- QA:
-- Docs:
+## Ruoli - TBD
+- Project Lead: Gabri
+- Data: Alessio
+- Metodo: TBD
+- Viz: Matteo
+- QA: TBD
+- Docs: TBD
 
 ## Dataset utilizzati
-- Nome dataset — Fonte ufficiale — Periodo — Livello
-- Nome dataset — Fonte ufficiale — Periodo — Livello
+- Fonte: [ISPRA - Dati comunali di produzione e raccolta differenziata](https://www.catasto-rifiuti.isprambiente.it/index.php?pg=downloadComune&width=1680&height=1050&advice=si)
+- Periodo: Ultimi 5 anni
+- Livello: Comunale
 
 ## Output pubblico
 - Tipo: (dashboard / report / pagina)
 - Link: (quando disponibile)
 
 ## Stato progetto
-🟢 Attivo | 🟡 In revisione | 🔴 Bloccato | ✅ Chiuso
+🟢 Attivo
 
 ## Come si contribuisce
 
@@ -35,5 +37,6 @@
 Dettagli in `WORKFLOW.md`.
 
 ## Link utili
-- Spreadsheet progetto ([Template](https://docs.google.com/spreadsheets/d/17EmTUVLzimppd70kckX2r2UxPQIwGDMU_Fzsqec4idg/edit?gid=1775469119#gid=1775469119))
+- [Avanzamento progetto](https://github.com/orgs/dataciviclab/projects/5/views/7?filterQuery=-status%3A%22%E2%9C%85+Completato%22+repo%3Adataciviclab%2Fprogetto-pilota)
+- [Spreadsheet progetto](https://docs.google.com/spreadsheets/d/1RzWUPYnZgcM235-XMWeD5rjNDNhqwkMWBvqDDLBvAMs/edit?usp=sharing)
 - [Metodo DataCivicLab](https://github.com/dataciviclab/dataciviclab/blob/main/METHOD.md)
