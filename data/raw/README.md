@@ -3,17 +3,11 @@
 ⚠️ In questa cartella **non** si caricano dataset pesanti su GitHub.
 
 Qui trovi:
-- link alle fonti ufficiali
-- link alla cartella Drive (raw)
-- descrizione dei file (formato, anni, campi principali)
-- note su licenze e aggiornamenti
+- [link alle fonti ufficiali](https://www.catasto-rifiuti.isprambiente.it/index.php?pg=downloadComune)
+- [link alla cartella Drive (raw)](https://drive.google.com/drive/folders/1vQ3a_jjUElW3khZtcWY7BySia4G6EDXZ?usp=drive_link)
+- file csv, dal 2019-2023, granularità comunale, frequenza annuale
+- [metadata run](https://drive.google.com/file/d/1L-xJBh9jEZWKOaADz9zrYGhx_kzpT67m/view?usp=drive_link)
 
----
-
-## 🔗 Link Drive (raw)
-_[incolla qui il link alla cartella Drive dei raw]_
-
----
 
 ## 📌 Checklist per ogni dataset
 - pubblico, citabile, verificabile
