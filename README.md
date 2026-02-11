@@ -11,7 +11,7 @@ Questo progetto serve a verificare se esistono Comuni che “migliorano sulla ca
 ## Ruoli
 - Project Lead: [Gabri](https://github.com/Gabrymi93)
 - Data: [Alessio](https://github.com/Lore222) 
-- Metodo: [Andrea]((https://github.com/Andrex786))
+- Metodo: [Andrea](https://github.com/Andrex786)
 - Viz: [Matteo](https://github.com/matteocavo)
 - QA: [Giacomo](https://github.com/ArdrinB)
 - Docs: [Arianna](https://github.com/r8wpmtqfz6-cell)
