@@ -123,5 +123,5 @@ e sono accompagnati da controlli qualità e metadati.
 
 ## Link ai file
 
-I file MART sono disponibili nella cartella Drive del progetto
+I file MART sono disponibili nella [cartella Drive del progetto](https://drive.google.com/drive/folders/1Y1CCmyshifHTIQ1TT0jpNl-9C_HzLDgP?usp=drive_link)
 e vengono rigenerati localmente tramite il notebook `03_MART_Comuni_RD_RU_Dashboard`.

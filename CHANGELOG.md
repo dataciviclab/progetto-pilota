@@ -5,10 +5,9 @@ Questo changelog documenta le modifiche rilevanti al progetto.
 ---
 
 ## v0.1 — MVP iniziale
-📅 Data: 5/2/26
+📅 Data: 
 
 ### Aggiunto
-- Aperta repo, collegato Board, base README.md
 
 ---
 
