@@ -65,3 +65,22 @@ Trasformazioni effettuate:
 
 Output:
 
+---
+
+## 🔁 Riproducibilità tecnica
+
+L’intera pipeline è pubblica e replicabile tramite notebook:
+
+### Fonte → RAW
+Download automatico dei CSV ISPRA originali
+https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/01_source_raw.ipynb
+
+### RAW → CLEAN
+Pulizia, normalizzazione colonne, parsing numerico e consolidamento multi-anno
+https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/02_raw_clean.ipynb
+
+### CLEAN → MART
+Costruzione metriche analitiche e dataset pronti per dashboard
+https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/03_MART_Comuni_RD_RU_Dashboard.ipynb
+
+Tutti i passaggi sono deterministici e ricostruibili a partire dai dati ISPRA originali.
