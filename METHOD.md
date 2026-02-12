@@ -69,18 +69,18 @@ Output:
 
 ## 🔁 Riproducibilità tecnica
 
-L’intera pipeline è pubblica e replicabile tramite notebook:
+L’intera pipeline è pubblica e completamente replicabile tramite i notebook del repository.
 
 ### Fonte → RAW
-Download automatico dei CSV ISPRA originali
-https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/01_source_raw.ipynb
+Download dei CSV originali dal portale ISPRA  
+[notebooks/01_source_raw.ipynb](notebooks/01_source_raw.ipynb)
 
 ### RAW → CLEAN
-Pulizia, normalizzazione colonne, parsing numerico e consolidamento multi-anno
-https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/02_raw_clean.ipynb
+Pulizia, normalizzazione colonne, parsing numerico e consolidamento multi-anno  
+[notebooks/02_raw_clean.ipynb](notebooks/02_raw_clean.ipynb)
 
 ### CLEAN → MART
-Costruzione metriche analitiche e dataset pronti per dashboard
-https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/03_MART_Comuni_RD_RU_Dashboard.ipynb
+Costruzione delle metriche analitiche e dei dataset pronti per dashboard  
+[notebooks/03_MART_Comuni_RD_RU_Dashboard.ipynb](notebooks/03_MART_Comuni_RD_RU_Dashboard.ipynb)
 
-Tutti i passaggi sono deterministici e ricostruibili a partire dai dati ISPRA originali.
+Eseguendo i notebook nell’ordine indicato è possibile rigenerare completamente i dataset CLEAN e MART a partire dai dati ufficiali ISPRA.
