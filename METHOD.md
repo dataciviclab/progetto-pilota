@@ -81,6 +81,6 @@ Pulizia, normalizzazione colonne, parsing numerico e consolidamento multi-anno
 
 ### CLEAN → MART
 Costruzione delle metriche analitiche e dei dataset pronti per dashboard  
-[notebooks/03_MART_Comuni_RD_RU_Dashboard.ipynb](notebooks/03_MART_Comuni_RD_RU_Dashboard.ipynb)
+[notebooks/03_clean_mart.ipynb](notebooks/03_clean_mart.ipynb)
 
 Eseguendo i notebook nell’ordine indicato è possibile rigenerare completamente i dataset CLEAN e MART a partire dai dati ufficiali ISPRA.
