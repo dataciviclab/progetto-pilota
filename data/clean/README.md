@@ -7,7 +7,8 @@ Questa cartella descrive i dataset **puliti/normalizzati**.
 ---
 
 ## 🔗 Link Drive (clean)
-_[incolla qui il link alla cartella Drive dei clean]_
+- [Dati](https://drive.google.com/drive/folders/1vmI6YXFG_ayTkgt8oQ22nUZx4q3OKYQM?usp=drive_link) 
+- [Meta](https://drive.google.com/drive/folders/1U39QLGvwyHpOTgANNfI7VaA2hy-8vWLv?usp=drive_link)
 
 ---
 
