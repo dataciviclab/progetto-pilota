@@ -1,5 +1,3 @@
-# 🧠 /data/mart
-
 # Dataset MART – Raccolta differenziata e rifiuti urbani (ISPRA)
 
 Questa cartella contiene i **dataset MART (Modeling / Analytics Ready Table)** 
@@ -9,6 +7,8 @@ I dataset sono progettati per:
 - rispondere a una **domanda civica specifica**
 - essere utilizzati direttamente in **dashboard Power BI**
 - supportare analisi comparative e temporali sui comuni italiani
+
+### Notebook: [03_clean_mart.ipynb](https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/03_clean_mart.ipynb)
 
 ---
 
@@ -124,4 +124,3 @@ e sono accompagnati da controlli qualità e metadati.
 ## Link ai file
 
 I file MART sono disponibili nella [cartella Drive del progetto](https://drive.google.com/drive/folders/1Y1CCmyshifHTIQ1TT0jpNl-9C_HzLDgP?usp=drive_link)
-e vengono rigenerati localmente tramite il notebook `03_MART_Comuni_RD_RU_Dashboard`.
