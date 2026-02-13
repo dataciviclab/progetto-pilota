@@ -20,7 +20,7 @@ L’obiettivo non è fare una classifica, ma distinguere:
 * La % RD è una proxy di qualità del sistema di gestione rifiuti.
 * I rifiuti pro capite sono più informativi dei rifiuti totali.
 * La popolazione ISTAT associata al dataset è sufficientemente coerente.
-* Le variazioni 2019–2023 sono significative per analisi tendenziale.
+* Le variazioni 2020–2023 sono significative per analisi tendenziale.
 * I dati ISPRA comunali sono comparabili anno su anno.
 
 
@@ -35,7 +35,7 @@ L’obiettivo non è fare una classifica, ma distinguere:
 
 ## 🔬 Scelte metodologiche
 
-* Confronto 20 v19s 2023 per ridurre rumore annuale.
+* Confronto 2020 vs 2023 per ridurre rumore annuale.
 * Uso di **delta assoluti e non solo percentuali**.
 * Calcolo rifiuti pro capite (kg/abitante).
 * Aggregazione 1 riga per comune-anno.
