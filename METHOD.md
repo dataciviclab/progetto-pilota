@@ -1,86 +1,93 @@
-# METHOD – Progetto Pilota: Rifiuti comunali (ISPRA)
+# 🧠 Metodo del progetto
 
-## 🎯 Domanda civica
+## 🎯 Obiettivo
 
-Ci sono comuni che migliorano la raccolta differenziata (%) ma aumentano i rifiuti totali?
+Verificare se l’aumento della percentuale di raccolta differenziata (RD) nei comuni italiani tra 2019 e 2023 sia accompagnato da:
 
-Il progetto è **descrittivo**: osserva pattern nei dati senza inferenze causali o giudizi normativi.
+* riduzione dei rifiuti urbani totali (RU)
+* riduzione dei rifiuti pro capite
+* oppure da un aumento complessivo dei rifiuti prodotti
 
----
+L’obiettivo non è fare una classifica, ma distinguere:
 
-# 📦 Architettura dati del progetto
+* miglioramento strutturale
+* miglioramento “percentuale”
+* greenwashing statistico
 
-Pipeline logica:
 
-RAW → CLEAN → MART → DASHBOARD
+## 📌 Assunzioni
 
-- RAW: dati originali immutabili
-- CLEAN: dati puliti e standardizzati
-- MART: dataset pronti per analisi/KPI
-- DASHBOARD: sola visualizzazione pubblica
+* La % RD è una proxy di qualità del sistema di gestione rifiuti.
+* I rifiuti pro capite sono più informativi dei rifiuti totali.
+* La popolazione ISTAT associata al dataset è sufficientemente coerente.
+* Le variazioni 2020–2023 sono significative per analisi tendenziale.
+* I dati ISPRA comunali sono comparabili anno su anno.
 
-Il Metodo documenta **tutte le trasformazioni fino al MART**.
-Le dashboard non introducono logiche dati.
 
----
+## ⚠️ Limiti dei dati
 
-# 1️⃣ Fonte → RAW
+* ISPRA pubblica dati aggregati, non micro-dati operativi.
+* Alcuni comuni hanno dati mancanti o incompleti.
+* La pandemia (2020–2021) può alterare trend reali.
+* I cambi di perimetro comunale (fusioni) possono introdurre rumore.
+* Non distinguiamo tipologie di rifiuti oltre l’aggregato RU/RD.
 
-### Notebook: 01_source_raw.ipynb
 
-Fonte:
-ISPRA – Catasto Rifiuti Comunali  
-https://www.catasto-rifiuti.isprambiente.it/
+## 🔬 Scelte metodologiche
 
-Operazioni:
-- download CSV originali per anno (2019–2023)
-- salvataggio immutabile su Drive
-- nessuna trasformazione
-- tracciabilità tramite metadata.json
+* Confronto 2020 vs 2023 per ridurre rumore annuale.
+* Uso di **delta assoluti e non solo percentuali**.
+* Calcolo rifiuti pro capite (kg/abitante).
+* Aggregazione 1 riga per comune-anno.
+* Riempimento NaN con 0 solo per export BI (non per analisi core).
+* Classificazione in quadranti:
 
-Principio:
-RAW è intoccabile e replica esattamente la fonte ufficiale.
+  * RD ↑ / RU ↓ → virtuoso strutturale
+  * RD ↑ / RU ↑ → miglioramento percentuale ma non strutturale
+  * RD ↓ / RU ↑ → peggioramento
+  * RD ↓ / RU ↓ → caso anomalo
 
----
+Abbiamo scelto il confronto diretto tra anni invece di regressione lineare perché:
 
-# 2️⃣ RAW → CLEAN
+* il progetto è esplorativo
+* l’obiettivo è leggibilità civica
+* vogliamo replicabilità semplice
 
-### Notebook: 02_raw_clean.ipynb
 
-Obiettivo:
-Costruire un dataset comunale multi-anno pulito e coerente.
+## 🚫 Cosa NON copre questo progetto
 
-Trasformazioni effettuate:
+* Non misura qualità del materiale raccolto.
+* Non analizza costi di gestione rifiuti.
+* Non include dati impiantistici.
+* Non valuta impatto ambientale reale.
+* Non considera flussi extra-comunali (trasferimenti rifiuti).
 
-- identificazione header reale ISPRA
-- rimozione righe spurie / tab
-- standardizzazione nomi colonne (snake_case)
-- parsing numeri formato italiano (migliaia ".", decimali ",", %, "-")
-- conversione tipi numerici
-- normalizzazione codice ISTAT
-- aggiunta campo `anno`
-- concatenazione multi-anno (append)
-- esportazione parquet
-- generazione profili e metadati (_meta)
 
-Output:
+## 🔁 Come replicare
 
----
+### Dataset
 
-## 🔁 Riproducibilità tecnica
+* ISPRA – Catasto Rifiuti – Dettaglio Comunale
+* Anni: 2019–2023
+* Livello: Comune
 
-L’intera pipeline è pubblica e completamente replicabile tramite i notebook del repository.
+### Notebook
 
-### Fonte → RAW
-Download dei CSV originali dal portale ISPRA  
-[notebooks/01_source_raw.ipynb](notebooks/01_source_raw.ipynb)
+* `01_source_raw`
+* `02_raw_clean`
+* `03_clean_mart`
 
-### RAW → CLEAN
-Pulizia, normalizzazione colonne, parsing numerico e consolidamento multi-anno  
-[notebooks/02_raw_clean.ipynb](notebooks/02_raw_clean.ipynb)
+### Passaggi principali
 
-### CLEAN → MART
-Costruzione delle metriche analitiche e dei dataset pronti per dashboard  
-[notebooks/03_clean_mart.ipynb](notebooks/03_clean_mart.ipynb)
+1. Scaricare CSV annuali ISPRA.
+2. Eseguire RAW → CLEAN (parsing numeri IT + standardizzazione colonne).
+3. Calcolare:
+   * RU totali
+   * RU pro capite
+   * % RD
+4. Creare delta 2020–2023.
+5. Classificare comuni per quadrante.
+6. Esportare:
+   * Parquet
+   * CSV
 
-Eseguendo i notebook nell’ordine indicato è possibile rigenerare completamente i dataset CLEAN e MART a partire dai dati ufficiali ISPRA.
