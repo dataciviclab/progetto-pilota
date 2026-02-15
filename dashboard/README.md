@@ -154,10 +154,3 @@ Branch: `feat/4-dashboard-finale`
 
 ---
 
-## 📌 Prossimi sviluppi
-
-- Analisi cluster territoriali  
-- Integrazione dati socio-economici  
-- Versione interattiva pubblica (Power BI Service)  
-- Serie temporale più lunga (2015–2025)
-
