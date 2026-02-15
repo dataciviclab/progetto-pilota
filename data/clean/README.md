@@ -1,20 +1,23 @@
-# 🧹 /data/clean – Dati puliti (documentazione)
+# 2️⃣ RAW → CLEAN
 
-Questa cartella descrive i dataset **puliti/normalizzati**.
+### Notebook: [02_raw_clean.ipynb](https://github.com/dataciviclab/progetto-pilota/blob/main/notebooks/02_raw_clean.ipynb)
 
-⚠️ Anche qui: niente file pesanti su GitHub. Solo schema + link Drive.
+Obiettivo:
+Costruire un dataset comunale multi-anno pulito e coerente.
 
----
+Trasformazioni effettuate:
 
-## 🔗 Link Drive (clean)
+- identificazione header reale ISPRA
+- rimozione righe spurie / tab
+- standardizzazione nomi colonne (snake_case)
+- parsing numeri formato italiano (migliaia ".", decimali ",", %, "-")
+- conversione tipi numerici
+- normalizzazione codice ISTAT
+- aggiunta campo `anno`
+- concatenazione multi-anno (append)
+- esportazione parquet
+- generazione profili e metadati (_meta)
+
+## Output:
 - [Dati](https://drive.google.com/drive/folders/1vmI6YXFG_ayTkgt8oQ22nUZx4q3OKYQM?usp=drive_link) 
 - [Meta](https://drive.google.com/drive/folders/1U39QLGvwyHpOTgANNfI7VaA2hy-8vWLv?usp=drive_link)
-
----
-
-## ✅ Cosa documentare
-- schema colonne (nomi + tipi)
-- trasformazioni principali (in 5–10 bullet)
-- controlli qualità minimi (duplicati, null, range)
-- notebook che genera il clean
-
