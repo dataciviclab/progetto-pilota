@@ -31,7 +31,7 @@ La dashboard consente di esplorare nel dettaglio questi comportamenti per territ
 
 ---
 
-## 🧩 Screenshots
+## Screenshots
 
 ## 🔎 Overview
 
@@ -150,7 +150,6 @@ Lo schema è documentato nella cartella `/data`.
 ## 🏷 Versione
 
 **v1.0 – Dashboard finale pubblica**  
-Branch: `feat/4-dashboard-finale`
 
 ---
 
