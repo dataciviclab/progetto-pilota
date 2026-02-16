@@ -22,8 +22,10 @@ Questo progetto serve a verificare se esistono Comuni che “migliorano sulla ca
 - Livello: Comunale
 
 ## Output pubblico
-- Tipo: (dashboard / report / pagina)
-- Link: (quando disponibile)
+- Tipo: Dashboard interattiva (Power BI)  
+- Periodo analizzato (Δ): 2020–2023  
+- Link pubblico: [Dashboard interattiva](https://app.powerbi.com/view?r=eyJrIjoiZmE5MTNlZmItN2NkZC00ZTkyLWEwZGItMzE3ZWJkNzI0ZjZjIiwidCI6IjgwNjZmMmRlLTgxZDctNGVjNC04Y2E5LTgzNzVjOTA4NjViNSJ9)
+- Documentazione: [README.md](./dashboard/README.md)
 
 ## Stato progetto
 🟢 Attivo
