@@ -7,7 +7,7 @@
 
 **Link pubblico:** [Dashboard interattiva](https://app.powerbi.com/view?r=eyJrIjoiZmE5MTNlZmItN2NkZC00ZTkyLWEwZGItMzE3ZWJkNzI0ZjZjIiwidCI6IjgwNjZmMmRlLTgxZDctNGVjNC04Y2E5LTgzNzVjOTA4NjViNSJ9)
 
-**Ultimo aggiornamento:** 16-02-2026
+**Ultimo aggiornamento:** 17-02-2026
 
 > **Nota:** qui non ci sono file dati.  
 > Trovi invece **descrizione, screenshot e guida di lettura** della dashboard.
@@ -44,7 +44,7 @@
 
 L’analisi 2020–2023 mostra che la maggior parte dei comuni italiani aumenta la percentuale di raccolta differenziata. Tuttavia, questo miglioramento non si traduce automaticamente in una riduzione dei rifiuti prodotti.
 
-Solo il **25% circa dei comuni (917 su quelli con RU valido)** si colloca nel quadrante virtuoso (RD↑, RU↓), mostrando un miglioramento reale e non solo “sulla carta”.
+Solo il **24,6% circa dei comuni (1913)** si colloca nel quadrante virtuoso (RD↑, RU↓), mostrando un miglioramento reale e non solo “sulla carta”.
 
 Una quota significativa di territori registra un aumento della raccolta differenziata accompagnato da un aumento dei rifiuti urbani pro capite, evidenziando un miglioramento solo apparente dell’indicatore.
 
@@ -104,7 +104,8 @@ I filtri laterali (Regione, Provincia, Comune) permettono l’esplorazione terri
 - L’aumento della RD non implica automaticamente riduzione RU  
 - Il 2020 include effetti pandemia  
 - I dati non considerano la qualità della raccolta  
-- I comuni molto piccoli possono generare variazioni estreme in tonnellate  
+- I comuni molto piccoli possono generare variazioni estreme in tonnellate
+- Non include consorsi ma solo comuni 
 
 ---
 
