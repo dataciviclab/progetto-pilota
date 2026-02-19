@@ -1,92 +1,123 @@
-# 📊 Dashboard – Raccolta differenziata vs Rifiuti urbani (ISPRA)
+# Dashboard – Raccolta differenziata vs Rifiuti urbani (ISPRA 2020–2023)
 
-Questa cartella raccoglie le informazioni sugli **output pubblici del progetto** (dashboard Power BI).
+---
+## Output
+
+**Tipo:** Dashboard interattiva (Power BI)  
+
+**Link pubblico:** [Dashboard interattiva](https://app.powerbi.com/view?r=eyJrIjoiZmE5MTNlZmItN2NkZC00ZTkyLWEwZGItMzE3ZWJkNzI0ZjZjIiwidCI6IjgwNjZmMmRlLTgxZDctNGVjNC04Y2E5LTgzNzVjOTA4NjViNSJ9)
+
+**Ultimo aggiornamento:** 17-02-2026
 
 > **Nota:** qui non ci sono file dati.  
 > Trovi invece **descrizione, screenshot e guida di lettura** della dashboard.
 
 ---
 
-## 🎯 Risposta alla domanda civica
-
-Ci sono comuni che migliorano la raccolta differenziata (%) ma aumentano i rifiuti totali?
-
-- Sì.
-
-L’analisi 2020–2023 evidenzia che: una quota rilevante di comuni registra un aumento della raccolta differenziata una parte di questi presenta però anche un aumento dei rifiuti urbani (pro capite o totali) esiste comunque un gruppo consistente di “virtuosi strutturali”, che migliorano la raccolta differenziata riducendo contemporaneamente i rifiuti pro capite.
-
-La relazione tra RD e RU non è quindi automaticamente inversa: l’aumento della raccolta differenziata non implica necessariamente una riduzione dei rifiuti prodotti.
-
-La dashboard consente di esplorare nel dettaglio questi comportamenti per territorio.
-
----
-
-## 🖥️ Dashboard
-
-**Tipo:** Dashboard (Power BI)  
-
-**Link pubblico:** https://app.powerbi.com/view?r=eyJrIjoiZmE5MTNlZmItN2NkZC00ZTkyLWEwZGItMzE3ZWJkNzI0ZjZjIiwidCI6IjgwNjZmMmRlLTgxZDctNGVjNC04Y2E5LTgzNzVjOTA4NjViNSJ9
-
-**Ultimo aggiornamento:** 15-02-2026
-
----
-
-## Screenshots
-
-## 🔎 Overview
+## Overview
 
 ![Overview](./screenshots/overview.png)
 
-## 🧮 Tooltip personalizzato
+## Tooltip personalizzato
 
 ![Tooltip](./screenshots/tooltip.png)
 
-## 📈 Trend temporale + Top migliori e peggiori
+## Trend temporale + Top migliori e peggiori
 
 ![Trend](./screenshots/trend+top5.png)
 
-## 📊 Confronto Comuni
+## Confronto Comuni
 
 ![Trend](./screenshots/tabella.png)
 
 ---
 
-### 🗂️ KPI principali
-- Numero di comuni analizzati  
+### KPI principali
+- Numero di comuni analizzati
+- Comuni con RU pro capite valido
 - Comuni RD↑ & RU↑ (N e %)  
-- Virtuosi strutturali (N e %)  
-- Mediana Δ RU pro capite (virtuosi)
+- Virtuosi strutturali (N e %)
 
 ---
 
-## 🧭 Come leggere la dashboard
+## Risposta alla domanda civica
 
-- **Asse X:** Δ Raccolta Differenziata (punti percentuali)  
-- **Asse Y:** Δ Rifiuti Urbani pro capite (kg/abitante)  
-- **Quadrante RD↑ RU↓:** miglioramento strutturale  
-- **Alert (!!):** territorio critico (RD↓ RU↑)  
-- **Frecce:** direzione del trend 2020 → 2023
+L’analisi 2020–2023 mostra che la maggior parte dei comuni italiani aumenta la percentuale di raccolta differenziata. Tuttavia, questo miglioramento non si traduce automaticamente in una riduzione dei rifiuti prodotti.
+
+Solo il **24,6% circa dei comuni (1913)** si colloca nel quadrante virtuoso (RD↑, RU↓), mostrando un miglioramento reale e non solo “sulla carta”.
+
+Una quota significativa di territori registra un aumento della raccolta differenziata accompagnato da un aumento dei rifiuti urbani pro capite, evidenziando un miglioramento solo apparente dell’indicatore.
+
+La relazione tra RD e RU non è quindi automaticamente inversa.
+
+La dashboard consente di esplorare nel dettaglio questi comportamenti per territorio.
 
 ---
 
-## ⚠️ Limiti dell’analisi
+## Come leggere la dashboard
+
+La dashboard è composta da cinque sezioni principali e un tooltip riepilogativo.
+
+### KPI sintetici (in alto)
+Mostrano:
+- Numero di comuni analizzati
+- Comuni con RU pro capite valido
+- Comuni RD↑ & RU↑ (numero e percentuale)
+- Virtuosi strutturali (numero e percentuale)
+
+### Grafico a dispersione (Δ 2020–2023)
+- **Asse X:** variazione della Raccolta Differenziata (punti percentuali)
+- **Asse Y:** variazione dei Rifiuti Urbani pro capite (kg/abitante)
+- Ogni punto rappresenta un comune
+- I quadranti identificano le combinazioni RD/RU (RD↑RU↑, RD↑RU↓, RD↓RU↑, RD↓RU↓)
+
+### Tooltip personalizzato (passando sopra al punto)
+Mostra:
+- Quadrante e Alert sintetico
+- Comune, Provincia e Regione
+- Δ RD (pp), Δ RU pro capite (kg/ab), Δ RU totali (t)
+- Confronto 2020–2023 per RD (%), RU pro capite (kg/ab) e RU totali (t)
+
+### Trend temporale 2019–2023
+- Andamento medio nazionale o per il territorio selezionato
+- Confronto tra RD (%) e RU pro capite (kg/abitante)
+
+### Classifiche Top 5 (Δ 2020–2023)
+- **Top 5 Peggiori (RD↑ ma RU↑):** comuni in cui aumenta la raccolta differenziata ma crescono anche i rifiuti pro capite
+- **Top 5 Virtuosi strutturali (RD↑ e RU↓):** comuni in cui aumenta la raccolta differenziata e diminuiscono i rifiuti pro capite
+
+### Tabella di confronto territoriale
+- Δ RD e Δ RU pro capite
+- RD 2020→2023 e RU pro capite 2020→2023
+- Trend RD e Trend RU
+- Quadrante e Alert sintetico (✓ / ▲ / ▽ / !!)
+
+I filtri laterali (Regione, Provincia, Comune) permettono l’esplorazione territoriale.
+
+---
+
+## Limiti dell’analisi
 
 - Analisi basata sulla variazione 2020–2023 (non serie lunga)  
-- Non misura causalità tra RD e RU  
 - I comuni con RU pro capite non valido sono esclusi dai calcoli percentuali  
-- I dati ISPRA possono essere soggetti a revisioni ex post  
+- I dati ISPRA possono essere soggetti a revisioni ex post
+- L’aumento della RD non implica automaticamente riduzione RU  
+- Il 2020 include effetti pandemia  
+- I dati non considerano la qualità della raccolta  
+- I comuni molto piccoli possono generare variazioni estreme in tonnellate
+- Non include consorsi ma solo comuni 
 
 ---
 
-# 📌 Metodo
+# Metodo
 
-## 📦 Dataset utilizzati
+## Dataset utilizzati
 Fonte: **ISPRA – Catasto Rifiuti**  
 Periodo: **2019–2023** (analisi variazioni 2020–2023)
 
 ---
 
-## 🏗 Costruzione del MART
+## Costruzione del MART
 
 Per ogni comune sono stati calcolati:
 
@@ -98,36 +129,34 @@ Per ogni comune sono stati calcolati:
 
 ### Definizione quadranti
 
-| Quadrante | Significato |
-|----------|-------------|
-| **RD↑ RU↓** | Virtuoso strutturale |
-| **RD↑ RU↑** | Migliora RD ma aumenta RU |
-| **RD↓ RU↓** | Riduce RU ma peggiora RD |
-| **RD↓ RU↑** | Critico |
+| Quadrante   | Condizione (Δ 2023–2020) | Lettura                     |
+| ----------- | ------------------------ | --------------------------- |
+| **RD↑ RU↓** | ΔRD > 0 e ΔRU p.c. < 0   | Miglioramento strutturale (Virtuoso)   |
+| **RD↑ RU↑** | ΔRD > 0 e ΔRU p.c. > 0   | RD migliora, RU aumenta     |
+| **RD↓ RU↓** | ΔRD < 0 e ΔRU p.c. < 0   | RU diminuisce, RD peggiora  |
+| **RD↓ RU↑** | ΔRD < 0 e ΔRU p.c. > 0   | Peggiora entrambi (critico) |
+
+
+### Logica Alert (tabella)
+
+- ✓ Virtuoso → RD↑ RU↓
+- ▲ RU aumenta → RD↑ RU↑
+- ▽ RD diminuisce → RD↓ RU↓
+- !! Critico → RD↓ RU↑
 
 ---
 
-## 📐 Scelte metodologiche
+## Scelte metodologiche
 
 - Δ RD espresso in **punti percentuali (pp)**  
 - Δ RU espresso in **kg per abitante**  
 - Percentuali calcolate solo sui comuni con RU pro capite valido  
-- Uso di `DISTINCTCOUNT` su `istat_comune_6`
+- Le misure sono calcolate a livello comunale (chiave: `istat_comune_6`)
 - I delta sono calcolati come differenza 2023 − 2020
 
 ---
 
-## ⚠️ Limiti dell’analisi (dettaglio)
-
-- Non è un’analisi causale  
-- L’aumento della RD non implica automaticamente riduzione RU  
-- Il 2020 include effetti pandemia  
-- I dati non considerano la qualità della raccolta  
-- I comuni molto piccoli possono generare variazioni estreme in tonnellate  
-
----
-
-## 🧠 Cosa si può dedurre
+## Cosa si può dedurre
 
 - Distribuzione territoriale dei comportamenti  
 - Percentuale reale di miglioramento strutturale  
@@ -136,18 +165,20 @@ Per ogni comune sono stati calcolati:
 
 ---
 
-## 📂 Coerenza con i MART
+## Coerenza con i MART
 
 La dashboard utilizza:
 
-- `/data/mart/mart_comuni_delta_2020_2023.csv`  
-- `/data/mart/serie_comuni_2019_2023.csv`
+- `mart_comuni_delta_2020_2023.parquet`  
+- `serie_comuni_2019_2023.parquet`
+
+I file MART sono disponibili nella [cartella Drive del progetto](https://drive.google.com/drive/folders/1Y1CCmyshifHTIQ1TT0jpNl-9C_HzLDgP?usp=drive_link)
 
 Lo schema è documentato nella cartella `/data`.
 
 ---
 
-## 🏷 Versione
+## Versione
 
 **v1.0 – Dashboard finale pubblica**  
 
