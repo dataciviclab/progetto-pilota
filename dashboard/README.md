@@ -169,8 +169,8 @@ Per ogni comune sono stati calcolati:
 
 La dashboard utilizza:
 
-- `mart_comuni_delta_2020_2023.csv`  
-- `serie_comuni_2019_2023.csv`
+- `mart_comuni_delta_2020_2023.parquet`  
+- `serie_comuni_2019_2023.parquet`
 
 I file MART sono disponibili nella [cartella Drive del progetto](https://drive.google.com/drive/folders/1Y1CCmyshifHTIQ1TT0jpNl-9C_HzLDgP?usp=drive_link)
 
