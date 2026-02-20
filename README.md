@@ -10,11 +10,11 @@ Questo progetto serve a verificare se esistono Comuni che “migliorano sulla ca
 
 ## Ruoli
 - Project Lead: [Gabri](https://github.com/Gabrymi93)
-- Data: [Alessio](https://github.com/Lore222) 
-- Metodo: [Andrea](https://github.com/Andrex786)
+- Data: [Alessio](https://github.com/Lore222) + [Matteo](https://github.com/matteocavo)
+- Metodo: [Andrea](https://github.com/Andrex786) + [Gabri](https://github.com/Gabrymi93)
 - Viz: [Matteo](https://github.com/matteocavo)
-- QA: [Giacomo](https://github.com/ArdrinB)
-- Docs: [Arianna](https://github.com/r8wpmtqfz6-cell)
+- QA: [Gabri](https://github.com/Gabrymi93) + [Matteo](https://github.com/matteocavo)
+- Docs: [Gabri](https://github.com/Gabrymi93) + [Matteo](https://github.com/matteocavo)
 
 ## Dataset utilizzati
 - Fonte: [ISPRA - Dati comunali di produzione e raccolta differenziata](https://www.catasto-rifiuti.isprambiente.it/index.php?pg=downloadComune&width=1680&height=1050&advice=si)
@@ -40,6 +40,7 @@ Questo progetto serve a verificare se esistono Comuni che “migliorano sulla ca
 Dettagli in `WORKFLOW.md`.
 
 ## Link utili
+- [Metodo](./METHOD.md)
+- [Pipeline dati](./notebooks/README.md)
+- [Dashboard](./dashboard/README.md)
 - [Avanzamento progetto](https://github.com/orgs/dataciviclab/projects/5/views/7?filterQuery=-status%3A%22%E2%9C%85+Completato%22+repo%3Adataciviclab%2Fprogetto-pilota)
-- [Spreadsheet progetto](https://docs.google.com/spreadsheets/d/1RzWUPYnZgcM235-XMWeD5rjNDNhqwkMWBvqDDLBvAMs/edit?usp=sharing)
-- [Metodo DataCivicLab](https://github.com/dataciviclab/dataciviclab/blob/main/METHOD.md)
