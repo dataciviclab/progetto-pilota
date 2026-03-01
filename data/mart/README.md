@@ -23,15 +23,13 @@ I dataset sono progettati per:
 ### 1️⃣ MART – Confronto comunale 2020–2023
 
 **Nome files**
-- mart_comuni_delta_2020_2023_dashboard.csv
-- mart_comuni_delta_2020_2023_dashboard.paequet
-
+- mart_comuni_delta_2020_2023_dashboard.parquet
 
 **Granularità**
 - 1 riga = 1 comune (codice ISTAT a 6 cifre)
 
 **Descrizione**
-Dataset “wide” che confronta due anni (2020 e 2023) per ciascun comune,
+Dataset "wide" che confronta due anni (2020 e 2023) per ciascun comune,
 calcolando variazioni di raccolta differenziata e rifiuti urbani.
 
 È il dataset principale utilizzato per rispondere alla domanda civica.
@@ -52,6 +50,8 @@ così da garantire coerenza tra dataset, dashboard e documentazione.
 - `ru_pro_capite_kg_2020` (float)
 - `ru_pro_capite_kg_2023` (float)
 - `delta_ru_pro_capite` (float)
+- `popolazione_2023` (float)
+- `cluster_demografico` (string — `<5k`, `5k-20k`, `20k-100k`, `>100k`, `N/D`)
 - `quadrante` (string)
 - `rd_su_rifiuti_su` (boolean)
 - `virtuoso_strutturale` (boolean)
@@ -59,27 +59,28 @@ così da garantire coerenza tra dataset, dashboard e documentazione.
 **KPI principali**
 - Numero comuni analizzati
 - % comuni con RD in aumento e rifiuti in aumento
-- Numero di comuni “virtuosi strutturali”
+- Numero di comuni "virtuosi strutturali"
 - Distribuzione dei comuni per classe di andamento
+- Performance per dimensione demografica
 
 **Uso consigliato**
 - Scatter plot (Δ RD% vs Δ rifiuti)
 - KPI di sintesi
 - Classifiche dei comuni migliori e peggiori
+- Analisi per cluster demografico
 
 ---
 
 ### 2️⃣ Serie storica comunale 2019–2023
 
 **Nome files**
-- serie_comuni_rd_ru_2019_2023.csv
-- serie_comuni_rd_ru_2019_2023.paequet
+- serie_comuni_rd_ru_2019_2023.parquet
 
 **Granularità**
 - 1 riga = 1 comune × 1 anno
 
 **Descrizione**
-Dataset in formato “long” che contiene la serie storica annuale
+Dataset in formato "long" che contiene la serie storica annuale
 di raccolta differenziata e rifiuti urbani per ciascun comune.
 
 È pensato per analisi di approfondimento temporale
@@ -104,6 +105,36 @@ e per una seconda pagina di dashboard.
 
 ---
 
+### 3️⃣ Cluster Summary 2020–2023
+
+**Nome files**
+- cluster_summary_2020_2023.parquet
+
+**Granularità**
+- 1 riga = 1 cluster demografico (4 righe totali, esclusi N/D)
+
+**Descrizione**
+Dataset aggregato per fascia demografica, derivato dal mart principale.
+Contiene le metriche medie per cluster, pronto per KPI e bar chart
+nella pagina Power BI "Performance per dimensione demografica".
+
+**Schema colonne**
+- `cluster_demografico` (string)
+- `n_comuni` (int)
+- `rd_media_2023` (float)
+- `ru_pc_medio_2023` (float)
+- `delta_rd_pp_medio` (float)
+- `delta_ru_pc_medio` (float)
+- `pct_rd_su_ru_su` (float — quota comuni problematici)
+- `pct_virtuosi` (float — quota comuni virtuosi strutturali)
+
+**Uso consigliato**
+- Card per numero comuni per cluster
+- Bar chart RD media e RU pro capite per cluster
+- Bar chart delta medi per cluster
+
+---
+
 ## Origine dei dati
 
 - **Fonte**: ISPRA – Catasto Rifiuti
@@ -121,7 +152,8 @@ e sono accompagnati da controlli qualità e metadati.
   variazioni strutturali nel medio periodo.
 - La serie storica completa è fornita per approfondimenti e analisi di trend.
 - I dataset non includono dati raw, ma solo output pronti per analisi e visualizzazione.
-- ### Calcolo delle variazioni e classificazione
+
+### Calcolo delle variazioni e classificazione
 
 Le variazioni (`delta_rd_pp`, `delta_ru_totali_t`, `delta_ru_pro_capite`)
 sono calcolate nel notebook MART come differenza tra 2023 e 2020:
@@ -132,6 +164,21 @@ sono calcolate nel notebook MART come differenza tra 2023 e 2020:
 
 La classificazione dei comuni in quadranti (es. migliorano RD ma aumentano RU)
 è generata direttamente nel dataset MART e non nel layer di visualizzazione.
+
+### Cluster demografico
+
+Il campo `cluster_demografico` classifica ogni comune in quattro fasce
+basate sulla `popolazione_2023`:
+
+| Cluster | Fascia |
+|---------|--------|
+| `<5k` | < 5.000 ab |
+| `5k-20k` | 5.000 – 19.999 ab |
+| `20k-100k` | 20.000 – 99.999 ab |
+| `>100k` | ≥ 100.000 ab |
+
+I 19 comuni con valore `N/D` presentano `popolazione_2023 = NaN` nella fonte ISPRA.
+Sono inclusi nel mart principale ma esclusi dal cluster summary.
 
 Power BI utilizza tali colonne senza ricalcolare la logica analitica.
 
