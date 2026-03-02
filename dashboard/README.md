@@ -30,6 +30,10 @@
 
 ![Trend](./screenshots/tabella.png)
 
+## Analisi per dimensione demografica
+
+![Cluster](./screenshots/cluster.png)
+
 ---
 
 ### KPI principali
@@ -91,6 +95,11 @@ Mostra:
 - RD 2020→2023 e RU pro capite 2020→2023
 - Trend RD e Trend RU
 - Quadrante e Alert sintetico (✓ / ▲ / ▽ / !!)
+
+### Analisi per dimensione demografica
+- RD media 2023 e RU pro capite medio per fascia di popolazione (<5k, 5k–20k, 20k–100k, >100k)
+- Variazione RD 2020–2023 per fascia
+- Scatter Δ RD / Δ RU con colore per cluster demografico
 
 I filtri laterali (Regione, Provincia, Comune) permettono l’esplorazione territoriale.
 
@@ -169,8 +178,9 @@ Per ogni comune sono stati calcolati:
 
 La dashboard utilizza:
 
-- `mart_comuni_delta_2020_2023.parquet`  
-- `serie_comuni_2019_2023.parquet`
+- `mart_comuni_delta_2020_2023_dashboard.parquet`
+- `serie_comuni_rd_ru_2019_2023.parquet`
+- `cluster_summary_2020_2023.parquet`
 
 I file MART sono disponibili nella [cartella Drive del progetto](https://drive.google.com/drive/folders/1Y1CCmyshifHTIQ1TT0jpNl-9C_HzLDgP?usp=drive_link)
 
@@ -180,7 +190,7 @@ Lo schema è documentato nella cartella `/data`.
 
 ## Versione
 
-**v1.0 – Dashboard finale pubblica**  
+**v1.1 – Dashboard finale pubblica**  
 
 ---
 
